@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <title>Static Template</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+</head>
+</head>
+
+<body>
+  <section class="full-screen">
+    <br>
+    <form action="" id="search-form">
+      <input type="text" placeholder="Choose your city 🌍" class="input" id="input">
+      <input type="submit" value="Go !!!" class="button">
+    </form>
+    <h4 class="date" id="date">Today</h4>
+    <div class="city">
+      <div class="current-city">
+        <h1></h1>
+        <div class="h2">
+          <span id="temperature"></span>
+          <span class="fahrenheit">
+            <a href="#" id="celsius">°C</a> |
+            <a href="#" id="fahrenheit">°F</a>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="europe-city">
+        <h3>Weather in Europe</h3>
+        <ul>
+          <li><a href="">London</a></li>
+          <li><a href="">Paris</a></li>
+          <li><a href="">Rome</a></li>
+          <li><a href="">Warsaw</a></li>
+          <li><a href="">Berlin</a></li>
+          <li><a href="">Vein</a></li>
+          <li><a href="">Madrid</a></li>
+          <li><a href="">Oslo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="week-days">
+      <div class="day">
+        <p>Monday</p>
+        <p class="emoji">❄️</p>
+        <p class="temp">0°C</p>
+      </div>
+      <div class="day">
+        <p>Tuesday</p>
+        <p class="emoji">❄️</p>
+        <p class="temp">-1°C</p>
+      </div>
+      <div class="day">
+        <p>Wednesday</p>
+        <p class="emoji">☀️</p>
+        <p class="temp">-3°C</p>
+      </div>
+      <div class="day">
+        <p>Thursday</p>
+        <p class="emoji">⛅</p>
+        <p class="temp">+2°C</p>
+      </div>
+      <div class="day">
+        <p>Friday</p>
+        <p class="emoji">⛅</p>
+        <p class="temp">+1°C</p>
+      </div>
+      <div class="day">
+        <p>Saturday</p>
+        <p class="emoji">☀️</p>
+        <p class="temp">+5°C</p>
+      </div>
+      <div class="day">
+        <p>Sunday</p>
+        <p class="emoji">☀️</p>
+        <p class="temp">+7°C</p>
+      </div>
+    </div>
+    <p class="author">Created by Inna Yasynchuk</p>
+  </section>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
