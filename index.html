@@ -18,7 +18,7 @@
   <section class="full-screen">
     <br>
     <form action="" id="search-form">
-      <input type="text" placeholder="Choose your city 🌍" class="input" id="input">
+      <input type="text" placeholder="Choose your city 🌍" class="input" id="input" autocomplete="off">
       <input type="submit" value="Go !!!" class="button">
     </form>
     <h4 class="date" id="date">Today</h4>
@@ -32,24 +32,19 @@
             <a href="#" id="fahrenheit">°F</a>
           </span>
         </div>
-
-      </div>
-
-      <div class="europe-city">
-        <h3>Weather in Europe</h3>
-        <ul>
-          <li><a href="">London</a></li>
-          <li><a href="">Paris</a></li>
-          <li><a href="">Rome</a></li>
-          <li><a href="">Warsaw</a></li>
-          <li><a href="">Berlin</a></li>
-          <li><a href="">Vein</a></li>
-          <li><a href="">Madrid</a></li>
-          <li><a href="">Oslo</a></li>
-        </ul>
       </div>
     </div>
-    <div class="week-days">
+    <div class="details">
+      <div class="icon" ><img id="icon" src="" alt="" width="110px"></div>
+      <div class="details-item">
+        <p id="description">Sky:</p>
+        <p id="wind">Wind:</p>
+        <p id="humidity">Humidity:</p>
+      </div>
+    </div>
+    <div><a href="https://github.com/InnaYasinchuk/Weather-app" class="author" target="_blank">Created by Inna Yasynchuk</a></div>
+    
+    <!-- <div class="week-days">
       <div class="day">
         <p>Monday</p>
         <p class="emoji">❄️</p>
@@ -85,8 +80,8 @@
         <p class="emoji">☀️</p>
         <p class="temp">+7°C</p>
       </div>
-    </div>
-    <a href="https://github.com/InnaYasinchuk/Weather-app" class="author" target="_blank">Created by Inna Yasynchuk</a>
+    </div> -->
+   
   </section>
   <script src="/js/script.js"></script>
 </body>

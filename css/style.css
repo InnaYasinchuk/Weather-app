@@ -10,7 +10,7 @@
 form {
   display: flex;
   margin: 0 auto;
-  width: 600px;
+  width: 700px;
   justify-content: space-between;
   align-items: center;
 }
@@ -61,10 +61,6 @@ h3 {
   text-align: center;
 }
 
-ul {
-  list-style: none;
-}
-
 a {
   text-decoration: none;
   padding: 20px;
@@ -75,7 +71,6 @@ a {
 
 a:hover {
   color: white;
-  text-decoration: underline;
 }
 
 p {
@@ -92,8 +87,8 @@ p:hover {
   background-image: url(../img/pexels-johannes-plenio-1126387.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1200px;
-  max-height: 700px;
+  max-width: 1000px;
+  height: 550px;
   display: block;
   margin: 20px auto;
   opacity: 0.9;
@@ -104,17 +99,7 @@ p:hover {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
-  width: 1100px;
-  margin-top: -30px;
-}
-
-.europe-city {
-  width: 250px;
-  height: 400px;
-  box-shadow: 5px 2px 15px #888585;
-  border: 2px solid rgba(11, 11, 74, 0.7);
-  background-color: rgb(255, 255, 255, 0.4);
-  text-align: center;
+  width: 1000px;
 }
 
 .current-city {
@@ -122,37 +107,13 @@ p:hover {
   max-height: 200px;
   display: flex;
   justify-content: space-between;
-  margin: 50px 50px;
+  margin: 25px auto;
   align-items: center;
 }
 
-.week-days {
-  display: flex;
-  width: 850px;
-  justify-content: space-between;
-  margin: -100px 40px 20px 30px;
-}
-
-.day {
-  width: 110px;
-  height: 150px;
-  text-align: center;
-  box-shadow: 5px 2px 15px #888585;
-  border: 2px solid rgba(11, 11, 74, 0.7);
-  background-color: rgb(255, 255, 255, 0.4);
-}
-
-.temp {
-  font-size: 30px;
-  padding: 10px;
-}
-
-.emoji {
-  font-size: 30px;
-}
-
 .date {
-  margin: 100px 0 0 110px;
+  display: block;
+  margin: 25px auto;
   padding: 10px;
   font-size: 28px;
   box-shadow: 5px 2px 15px #888585;
@@ -181,9 +142,38 @@ p:hover {
 
 .author{
   display: block;
-  margin: -20px 0 10px 850px;
+  margin: -50px 0 10px 800px;
   font-family:'Courier New', Courier, monospace;
   font-weight: bold;
-  text-shadow: 1px 1px white;
-  font-size: 20px;
+  color: white;
+  text-shadow: 0.5px 0.5px rgb(31, 31, 112);
+  font-size: 16px;
+}
+
+.details{
+  width: 500px;
+  display: flex;
+  margin: 25px auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon{
+  width: 120px;
+  height: 120px;
+  background-color: rgb(255, 255, 255, 0.4);
+  border: 2px solid rgba(11, 11, 74, 0.7);
+  box-shadow: 5px 2px 15px #888585;
+  align-items: center;
+  justify-content: center;
+}
+.details-item{
+  width: 300px;
+  background-color: rgb(255, 255, 255, 0.4);
+  border: 2px solid rgba(11, 11, 74, 0.7);
+  box-shadow: 5px 2px 15px #888585;
+  text-align: left;
+  padding: 0 10px;
+  font-weight: bold;
+  
 }
