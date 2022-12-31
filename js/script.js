@@ -22,6 +22,54 @@ document.querySelector(
   "#date"
 ).innerHTML = `Today is ${day}, ${hour}:${minutes}`;
 
+function formatDay(timestamp){
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay()
+  let days = [
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat"
+];
+  return days[day];
+
+}
+
+function displayForecast(response){
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector('#forecast');
+  let forecastHTML = "";
+  forecast.forEach(function(forecastDay, index){
+    if(index < 8){
+    forecastHTML = forecastHTML + `
+  <div class="days">
+        <p class="forecast-day">${formatDay(forecastDay.dt)}</p> 
+        <img class="forecast-image" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="46">
+        <p class="forecast-temperature"> 
+          <span class="forecast-temperature-max"> ${Math.round(forecastDay.temp.max)}°</span> 
+          <span> / </span>
+          <span class="forecast-temperature-min">${Math.round(forecastDay.temp.min)}°</span> 
+        </p> 
+      </div> `;
+    }
+  })
+  
+      
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates){
+  let apiKey = "2bd326a60dc89a53287e446e819664df";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`
+  
+  axios.get(apiUrl).then(displayForecast)
+}
+
+
 function showTemperatureAndCity(response) {
   
   document.querySelector("h1").innerHTML = response.data.name;
@@ -33,6 +81,8 @@ function showTemperatureAndCity(response) {
   document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemp = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function chooseCity(event) {
@@ -76,3 +126,5 @@ fahrenheit.addEventListener("click", convertFahrenheit);
 
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", convertCelsius);
+
+displayForecast()
