@@ -93,13 +93,14 @@ p:hover {
   margin: 20px auto;
   opacity: 0.9;
   box-shadow: 5px 2px 15px #888585;
+  position: relative;
 }
 
 .city {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
-  width: 1000px;
+  max-width: 1000px;
 }
 
 .current-city {
@@ -119,7 +120,7 @@ p:hover {
   box-shadow: 5px 2px 15px #888585;
   border: 2px solid rgba(11, 11, 74, 0.7);
   background-color: rgb(255, 255, 255, 0.4);
-  width: 380px;
+  max-width: 380px;
   height: 60px;
   text-align: center;
 }
@@ -143,12 +144,15 @@ p:hover {
 .author {
   width: 300px;
   display: block;
-  margin: -50px 0 10px 700px;
+  bottom: 0;
+  right: 0;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   color: white;
   text-shadow: 0.5px 0.5px rgb(31, 31, 112);
   font-size: 16px;
+  position: absolute;
+  padding: 10px;
 }
 
 .details {
@@ -187,27 +191,73 @@ p:hover {
   border: 2px solid rgba(11, 11, 74, 0.7);
   box-shadow: 5px 2px 15px #888585;
   justify-content: space-around;
-
 }
 
-.days{
+.days {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
   align-items: center;
   margin: 10px;
- }
+}
 
-.forecast-day, .forecast-temperature{
+.forecast-day,
+.forecast-temperature {
   font-size: 20px;
   font-weight: bold;
 }
 
-.forecast-image{
+.forecast-image {
   background-color: rgba(40, 39, 39, 0.4);
-    border: 2px solid rgba(11, 11, 74, 0.7);
-    box-shadow: 5px 2px 15px #888585;
-    
-    
+  border: 2px solid rgba(11, 11, 74, 0.7);
+  box-shadow: 5px 2px 15px #888585;
+}
+
+@media screen and (max-width: 750px) {
+  .city {
+    max-width: 700px;
+  }
+  .current-city {
+    max-width: 500px;
+  }
+
+  .h2 {
+    width: 150px;
+    padding: 5px;
+    font-size: 35px;
+    height: 65px;
+  }
+  h1 {
+    width: 250px;
+    padding: 10px;
+    font-size: 35px;
+    height: 65px;
+    text-align: center;
+  }
+  #fahrenheit,
+  #celsius {
+    font-size: 35px;
+  }
+  form {
+    width: 400px;
+  }
+  .input {
+    padding: 10px;
+    font-size: 20px;
+
+    width: 220px;
+  }
+  .details-item {
+    width: 250px;
+    text-align: left;
+    padding: 0 10px;
+  }
+  .details {
+    width: 400px;
+  }
+  .forecast-day,
+  .forecast-temperature {
+    font-size: 16px;
+  }
 }
