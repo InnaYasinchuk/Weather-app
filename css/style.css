@@ -219,17 +219,17 @@ p:hover {
     max-width: 700px;
   }
   .current-city {
-    max-width: 500px;
+    max-width: 380px;
   }
 
   .h2 {
-    width: 150px;
+    width: 130px;
     padding: 5px;
     font-size: 35px;
     height: 65px;
   }
   h1 {
-    width: 250px;
+    width: 220px;
     padding: 10px;
     font-size: 35px;
     height: 65px;
@@ -245,19 +245,20 @@ p:hover {
   .input {
     padding: 10px;
     font-size: 20px;
+    background-color: rgb(255, 255, 255, 0.7);
 
     width: 220px;
   }
   .details-item {
     width: 250px;
-    text-align: left;
-    padding: 0 10px;
+    
   }
   .details {
-    width: 400px;
+    width: 380px;
   }
   .forecast-day,
   .forecast-temperature {
     font-size: 16px;
+   
   }
 }
